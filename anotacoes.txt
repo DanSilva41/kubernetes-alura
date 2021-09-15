@@ -1,0 +1,40 @@
+Definições de máquinas no Kubernetes:
+
+Master: 
+* Gerenciar o cluster
+* Manter e atualizar o estado desejado
+* Receber e executar novos comandos
+	
+	CONTROL PLANE
+		* API
+			- kubectl para chamar a REST API
+		* Controller Manager
+		* Schedule
+		* etcd (dados vitais salvos)
+
+Node:
+* Executar as aplicações.
+	NODES 
+		* kubelet (execução dos pods)
+		* kube proxy (comunicação entre os nossos nodes)
+
+
+Pods:
+	* conjunto de um ou mais container
+	* ganha um IP único para acesso a múltiplos containers dentro dele, o que difere é a porta
+	* containers dentro de um pod compartilham namespaces de rede e IPC e também podem compartilhar volumes
+	* são efêmeros
+	* caso tenha dois containers dentro de um pod e uma falhe, o pod ainda continuará ativo
+
+Services:
+    * Abstrações para expor aplicações executando em um ou mais pods
+    * Proveem IP's fixos para comunicação
+    * Proveem um DNS para um ou mais pods
+    * São capazes de fazer balanceamento de carga
+
+    3 tipos:
+        * ClusterIP (apenas internamente no cluster)
+            "Propósito de fazer a comunicação entre diferentes POD's"
+
+        * NodePort (internamente e externamento ao cluster)
+        * LoadBalancer

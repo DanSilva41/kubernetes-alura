@@ -4,17 +4,30 @@ kubectl run <pod-name> --image=<name-version-image>
 # Editar POD por escrita imperativa
 kubectl edit pod <pod-name> 
 
-# Criar/Atualizar recurso por escrita declarativa
+# Deletar POD por escrita imperativa
+kubectl delete pod <pod-name>
+
+# Criar/Atualizar recurso(s) por escrita declarativa
 kubectl apply -f <filename>
 
-# Ver status de todos os pods
-kubectl get pods
+# Deletar recurso(s) por escrita imperativa
+kubectl delete -f <filename>
 
-# Ver status de todos os pods de forma assistida
-kubectl get pods --watch
+# Ver status de todas as unidades de um recurso
+# pods, services(svc)
+kubectl get <resource>
 
-# Ver status de um pod
-kubectl get pods -n <pod-name>
+# Ver status de todas as unidades de um recurso de forma assistida
+# pods, services(svc)
+kubectl get <resource> --watch
+
+# Ver status de todas as unidades de um recurso de maneira ampla
+# pods, services(svc)
+kubectl get <resource> -o wide
+
+# Ver status de recurso pelo nome
+# pods, services(svc)
+kubectl get <resource> -n <pod-name>
 
 # Ver detalhes de um pod
 kubectl describe pod <pod-name>
