@@ -1,0 +1,26 @@
+# Criar POD por escrita imperativa
+kubectl run <pod-name> --image=<name-version-image>
+
+# Editar POD por escrita imperativa
+kubectl edit pod <pod-name> 
+
+# Criar/Atualizar recurso por escrita declarativa
+kubectl apply -f <filename>
+
+# Ver status de todos os pods
+kubectl get pods
+
+# Ver status de todos os pods de forma assistida
+kubectl get pods --watch
+
+# Ver status de um pod
+kubectl get pods -n <pod-name>
+
+# Ver detalhes de um pod
+kubectl describe pod <pod-name>
+
+# Ver detalhes de um pod
+kubectl describe pod <pod-namge>
+
+# Acessar container dentro do pod
+kubectl exec -it <pod-name> -- bash
