@@ -7,5 +7,5 @@ spec:
   selector:
     app: segundo-pod
   ports:
-  - port: 1000 # exposição no serviço
+  - port: 80 # exposição no serviço
     targetPort: 80 # porta de acesso no pod

@@ -13,6 +13,10 @@ kubectl apply -f <filename>
 # Deletar recurso(s) por escrita imperativa
 kubectl delete -f <filename>
 
+# Deletar todas as unidades de um recurso por escrita imperativa
+# pods, services(svc)
+kubectl delete <resources> --all
+
 # Ver status de todas as unidades de um recurso
 # pods, services(svc)
 kubectl get <resource>

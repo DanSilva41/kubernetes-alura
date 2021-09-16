@@ -37,4 +37,10 @@ Services:
             "Propósito de fazer a comunicação entre diferentes POD's"
 
         * NodePort (internamente e externamento ao cluster)
-        * LoadBalancer
+			nodePort pode ser definido com um valor entre 30000 até 32767
+
+        * LoadBalancer (internamente e externamento ao cluster usando o
+			load balancer do provedor atual (AWS, Google Cloud, Azure, entre outros))
+
+			possui o atributo nodePort também
+			nodePort pode ser definido com um valor entre 30000 até 32767
