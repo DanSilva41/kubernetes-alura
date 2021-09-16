@@ -44,3 +44,8 @@ Services:
 
 			possui o atributo nodePort também
 			nodePort pode ser definido com um valor entre 30000 até 32767
+
+ConfigMap
+	* Definir configurações, variáveis
+	* Reutilização entre diversos recursos
+

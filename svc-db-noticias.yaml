@@ -8,3 +8,4 @@ spec:
     app: db-noticias
   ports:
   - port: 3306
+    targetPort: 3306
